@@ -2378,6 +2378,16 @@ namespace ServerTools
                     sw.WriteLine(string.Format("    <Phrase Name=\"Prayer2\" Message=\"{0}\" />", _phrase));
                     sw.WriteLine();
                     sw.WriteLine("    <!-- ******************************************************** -->");
+                    sw.WriteLine("    <!-- ************************ Prefab_Reset ************************ -->");
+                    sw.WriteLine("    <!-- ******************************************************** -->");
+                    
+                    if (!Dict.TryGetValue("PrefabReset1", out _phrase))
+                    {
+                        _phrase = "You are in a POI reset zone, POI resets after server restart";
+                    }
+                    sw.WriteLine(string.Format("    <Phrase Name=\"PrefabReset1\" Message=\"{0}\" />", _phrase));
+                    sw.WriteLine();
+                    sw.WriteLine("    <!-- ******************************************************** -->");
                     sw.WriteLine("    <!-- ********************* Scout_Player ********************* -->");
                     sw.WriteLine("    <!-- ******************************************************** -->");
                     if (!Dict.TryGetValue("ScoutPlayer1", out _phrase))

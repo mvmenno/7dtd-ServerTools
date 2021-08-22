@@ -96,6 +96,9 @@ namespace ServerTools
                                             {
                                                 Market.MarketCheck(_cInfo, _player);
                                             }
+                                            if (PrefabReset.IsEnabled) {
+                                                PrefabReset.PlayerCheck(_cInfo,_player);
+                                            }
                                         }
                                     }
                                     else if (BloodmoonWarrior.IsEnabled && BloodmoonWarrior.WarriorList.Contains(_cInfo.playerId))
